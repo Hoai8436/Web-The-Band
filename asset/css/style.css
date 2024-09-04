@@ -1,0 +1,439 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* caif dat header ve mau sac va do cao dong chu */
+#header{
+    background-color: black;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+/* trinhf bay dinh dang namw ngang cua cacs dong chu */
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+/* Dinh dang khoi ngang inline, kieu chu, relative moc cua cac tap con la more */
+#nav li{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;           
+}
+/* cai vi tri cho cho tep con phu thuoc cua more */
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(000,000,000,0.3);
+
+}
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav > ul > li > a{
+    text-transform: uppercase;
+    color: #fff;
+}
+/* Dinh dang kieu cho chu, khoangr cacsh chu, do cao, khoi dinh dang cua cac muc chinh */
+#nav li a{
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    display: block;
+    top: 100%;
+    left: 0;
+}
+
+/* Dinh dang chi vao more se ra mot block */
+#nav > ul > li:hover > a, #nav .subnav li:hover {
+    display: block;
+    color:#000;
+    background-color: #ccc;                          
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 16px;
+    min-width: 160px;
+}
+
+.nav_down{
+    font-size: 14px;
+}
+#header .mopile-menu-putton{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mopile-menu-putton, #header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    padding: 0 21px !important;
+    cursor: pointer;  
+}
+ #header .search-button:hover{
+    background-color: #f44336;
+}
+#header .mopile-menu-putton:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/asset/img/slider/chicago.jpg') top center / cover no-repeat;
+    
+}
+#slider .text_content{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider .text_heading{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+#slider .text_description{
+    font-size: 15px;
+    
+}
+
+#content{
+   
+}
+/* content heading*/
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading, #content .suheading {
+    text-align: center;
+}
+#content .section-heading{
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 500px;
+}
+#content .suheading{
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 25px;
+    opacity: 0.5;
+}
+.tour .suheading{
+    margin-top: 15px !important;
+}
+/* content text */
+#content .about{
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 1.4;
+    text-align: justify;
+}
+/* content ve thanh vien */
+
+#content .team{
+    margin-top: 48px;
+}
+
+#content .mem-name{
+    font-size: 15px;
+}
+
+#content .mem-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+/* .code chugn dung cho nhiu the... */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left ;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-third{
+    width: 33.333%
+}
+.col-full{
+    width: 100%;    
+}
+ .col-half{
+    width: 50%;
+}
+.mt8{
+    margin-top: 8px;
+}
+.mt16{
+    margin-top: 16px;
+}
+.text-center{
+    text-align: center !important;
+}
+.ticket-button{
+    margin-top: 15px;
+    font-size: 16px;
+    display: inline-block;
+    background-color:#000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;
+}
+.ticket-button:hover{
+    background-color:#ccc;
+    color: #000;
+    cursor: pointer;
+}
+.fr{
+    float: right;
+}
+/* tour */
+.tour {
+    background-color: #000;
+}
+.text-white{
+    color: #fff !important;
+}
+/* tickets */
+.ticket-list{
+    background-color:#fff;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+.ticket-list li{
+    font-size: 15px;
+    padding: 10px 15px;
+    color:#757575;  
+    border-bottom: 1px solid #ddd;
+
+}
+
+.ticket-list .sold-out{
+    background-color:#f44336 !important;
+    color: #fff;
+    padding: 4px 4px;
+    margin-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.ticket-list .quantity{
+    width: 24px;
+    height: 24px;
+    background-color:#000;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.mua-tick{
+    margin-top: 32px;
+   padding-bottom: 48px;
+}
+
+.tick-img:hover{
+    opacity: 0.6;
+}
+.tick-img{
+    width: 100%;
+    display: block;
+}
+.ticket-content{
+    background-color:#fff;
+    padding: 16px;
+    color:#000;
+    font-size: 15px;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 550;
+    margin-bottom: 15px;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.play-desc{
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(000,000,000,0.4);
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+.modal.open {
+   display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 200px ;
+    position: relative;
+}
+
+ .modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:#fff;
+    letter-spacing: 5px;  
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-close{
+    opacity: 0.8;
+}
+.h-icon .ti-bag{
+    margin-right: 16px;
+}
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    padding: 8px; 
+    display:block;
+    margin-bottom: 12px;
+    width: 100%;
+}
+#pay{
+    width: 100%;
+    background-color: #009688;
+    border: none;
+    color:#fff;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 16px;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+#pay:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+.modal-footer {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 22.5px;
+}
+.modal-footer a {
+    color: #2196F3!important;
+    cursor: pointer;
+}
+.ti-close:hover{
+    background-color: #ccc;
+    color:#000;
+}
+
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+}
+.contact-info i[class*=ti-]{
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .contact-input{
+    padding: 10px;
+    border: 1px solid #ccc ;
+    width: 100%;
+}
+/* footer */
+.map-img{
+    margin-top: 32px;
+    filter: grayscale(50%);
+}
+.map-fix{
+    max-width: 100%;
+}
+.footer-icon a{
+    font-size: 25px;
+    color: #434343;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+.footer-icon a:hover{
+    color: #757575;
+}
+.footer-content, .footer-content a{
+    margin-top: 15px;
+    color: #434343;
+}
+#footer{
+    padding: 64px 16px;
+}
