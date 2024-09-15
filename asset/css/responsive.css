@@ -33,14 +33,27 @@
     #nav li:hover .subnav{
         display: none;
     } 
-    .col{
+
+    .col-full-s{
         float: none;
         width: 100%;
         max-width: 100%;
     }
     .col-third{
         margin-bottom: 25px;
-       
+    }
+    
+    #content .mem-img{
+        width: 60%;
+    }
+    .mb{
+        margin-bottom: 32px;
+    }
+    .m-bf{
+        margin-bottom: 8px !important;
+    }
+    .full-width-s{
+        width: 100% !important;
     }
 
 }
